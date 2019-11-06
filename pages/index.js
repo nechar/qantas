@@ -4,7 +4,6 @@ import Nav from '../components/Nav'
 import Head from '../components/Head'
 const axios = require('axios');
 
-
 const Home = () => {
 
   return (

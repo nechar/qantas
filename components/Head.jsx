@@ -1,4 +1,5 @@
 import NextHead from 'next/head';
+
 const Head = () => (
     <NextHead>
         <title>Quantas</title>
