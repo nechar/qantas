@@ -1,7 +1,7 @@
 
 import {
-  Card, Button, CardHeader, CardFooter, CardBody,
-  CardTitle, CardText
+  Card, Button, CardHeader, CardBody,
+  CardText
 } from 'reactstrap';
 const Airport = ({ airport }) => (
   <div >
@@ -10,7 +10,7 @@ const Airport = ({ airport }) => (
       <CardBody>
         <CardText>
           {/* {JSON.stringify(airport)} */}
-          Some information about the airport<br />
+          A few details about the airport<br />
           Eg: The time-zone of {airport.city.cityName} is {airport.city.timeZoneName}
         </CardText>
         <Button>More Details</Button>

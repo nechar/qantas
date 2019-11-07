@@ -30,14 +30,14 @@ const Home = () => {
 
 
   return (
-    <div>
+    <div >
       <Head />
       <Nav />
 
       {loading && <div>Loading Airports...</div>}
 
       <div className="row">
-        {data.slice(0, 20).map((airport, index) => <div className="col-lg-4 col-md-6" key={index}>{<Airport airport={airport} />}</div>)}
+        {data.slice(0, 20).map((airport, index) => <div className="col-lg-4 col-md-6 mt-3" key={index}>{<Airport airport={airport} />}</div>)}
       </div>
 
     </div>
