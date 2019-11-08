@@ -1,5 +1,5 @@
 import React from 'react'
-import Airport from '../components/Airport'
+import AirportCard from '../components/AirportCard'
 import Nav from '../components/Nav'
 import Head from '../components/Head'
 const axios = require('axios');
@@ -9,6 +9,7 @@ import { useState, useEffect } from 'react';
 const Home = () => {
 
   const [loading, setLoading] = useState(true);
+  const [showError, setShowError] = useState(false);
   const [data, setData] = useState([]);
 
   useEffect(getAirportData, []);
@@ -20,11 +21,10 @@ const Home = () => {
         setLoading(false);
       })
       .catch(function (error) {
-        // handle error
-        console.log(error);
+        setShowError(true);
       })
-      .finally(function () {
-        // always executed
+      .finally(function (error) {
+        setLoading(false);
       });
   }
 
@@ -34,10 +34,14 @@ const Home = () => {
       <Head />
       <Nav />
 
-      {loading && <div>Loading Airports...</div>}
+      {loading && <p className="h4 text-center">Loading Airports...</p>}
+      {showError && <p className="h4 text-center">Server Down. Please try again later</p>}
 
       <div className="row">
-        {data.slice(0, 20).map((airport, index) => <div className="col-lg-4 col-md-6 mt-3" key={index}>{<Airport airport={airport} />}</div>)}
+        {
+          data.slice(0, 20).map((airport, index) => <div className="col-lg-4 col-md-6 mt-3" key={index}>
+            {<AirportCard airport={airport} />}
+          </div>)}
       </div>
 
     </div>
