@@ -1,7 +1,5 @@
-
 import {
-  Card, Button, CardHeader, CardBody,
-  CardText
+  Card, Button, CardHeader, CardBody
 } from 'reactstrap';
 
 import Link from 'next/link';
@@ -13,14 +11,11 @@ const AirportCard = ({ airport }) => {
       <Card>
         <CardHeader>{airport.city.cityName}</CardHeader>
         <CardBody>
-          <CardText>
-            {/* {JSON.stringify(airport)} */}
-            A few details about the airport<br />
-            Eg: The time-zone of {airport.city.cityName} is {airport.city.timeZoneName}
-          </CardText>
-
+          <h5>A few details about the airport</h5>
+          Eg: The time-zone of {airport.city.cityName} is {airport.city.timeZoneName}
+          <br />
           <Link href={link}>
-            <Button>More Details</Button>
+            <Button className="btn-block">More Details</Button>
           </Link>
         </CardBody>
       </Card>
