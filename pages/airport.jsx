@@ -7,7 +7,6 @@ import { useState, useEffect } from 'react';
 
 
 const Airport = (param) => {
-    console.log('param', param);
 
     const airportCode = param.url.query.airportCode;
 
