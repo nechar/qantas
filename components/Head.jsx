@@ -2,7 +2,7 @@ import NextHead from 'next/head';
 
 const Head = () => (
     <NextHead>
-        <title>Quantas</title>
+        <title>Qantas</title>
         <link rel='icon' href='/favicon.ico' />
         {/* Bootstrap CDN */}
         <link
