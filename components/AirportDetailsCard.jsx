@@ -14,7 +14,7 @@ const AirportDetailsCard = ({ airport }) => {
           {JSON.stringify(airport)}
           <br />
           <Link href="../">
-            <Button className="btn-block">Go back</Button>
+            <Button className="btn-block mt-3">Go back</Button>
           </Link>
         </CardBody>
       </Card>

@@ -30,14 +30,14 @@ const Home = () => {
 
 
   return (
-    <div >
+    <div>
       <Head />
       <Nav />
 
       {loading && <p className="h4 text-center">Loading Airports...</p>}
       {showError && <p className="h4 text-center">Server Down. Please try again later</p>}
 
-      <div className="row">
+      <div className="row m-3">
         {
           data.slice(0, 20).map((airport, index) => <div className="col-lg-4 col-md-6 mt-3" key={index}>
             {<AirportCard airport={airport} />}

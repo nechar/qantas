@@ -39,7 +39,7 @@ const Airport = (param) => {
             {loading && <p className="h4 text-center">Loading Details...</p>}
             {showError && <p className="h4 text-center">Server Down. Please try again later</p>}
 
-            <div className="row">
+            <div className="row  m-3">
                 {
                     data
                         .filter((airport) => airport.airportCode == airportCode)

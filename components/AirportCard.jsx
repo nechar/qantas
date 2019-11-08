@@ -15,7 +15,7 @@ const AirportCard = ({ airport }) => {
           Eg: The time-zone of {airport.city.cityName} is {airport.city.timeZoneName}
           <br />
           <Link href={link}>
-            <Button className="btn-block">More Details</Button>
+            <Button className="btn-block mt-3">More Details</Button>
           </Link>
         </CardBody>
       </Card>
