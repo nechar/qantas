@@ -16,7 +16,6 @@ const Home = () => {
     getAirportData()
       .then(function (response) {
         setData(response.data);
-        setLoading(false);
       })
       .catch(function (error) {
         setShowError(true);
