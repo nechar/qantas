@@ -12,7 +12,7 @@ const Home = () => {
   const [showError, setShowError] = useState(false);
   const [data, setData] = useState([]);
 
-  const init = () => {
+  const initialise = () => {
     getAirportData()
       .then(function (response) {
         setData(response.data);
@@ -25,7 +25,7 @@ const Home = () => {
       });
   }
 
-  useEffect(init, []);
+  useEffect(initialise, []);
 
 
   return (
@@ -38,7 +38,7 @@ const Home = () => {
 
       <div className="row m-3">
         {
-          data.slice(0, 20).map((airport, index) => <div className="col-lg-4 col-md-6 mt-3" key={index}>
+          data.slice(0, 50).map((airport, index) => <div className="col-lg-4 col-md-6 mt-3" key={index}>
             {<AirportCard airport={airport} />}
           </div>)}
       </div>

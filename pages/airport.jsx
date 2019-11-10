@@ -1,8 +1,7 @@
-import React from 'react'
-import AirportDetailsCard from '../components/AirportDetailsCard'
-import Nav from '../components/Nav'
-import Head from '../components/Head'
-const axios = require('axios');
+import React from 'react';
+import AirportDetailsCard from '../components/AirportDetailsCard';
+import Nav from '../components/Nav';
+import Head from '../components/Head';
 import { useState, useEffect } from 'react';
 import { getAirportData } from '../services/api';
 
@@ -15,7 +14,7 @@ const Airport = (param) => {
     const [showError, setShowError] = useState(false);
     const [data, setData] = useState([]);
 
-    const init = () => {
+    const initialise = () => {
         getAirportData()
             .then(function (response) {
                 setData(response.data);
@@ -28,9 +27,7 @@ const Airport = (param) => {
             });
     }
 
-    useEffect(init, []);
-
-
+    useEffect(initialise, []);
 
     return (
         <div >
