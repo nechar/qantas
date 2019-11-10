@@ -2,8 +2,8 @@ import React from 'react'
 import AirportCard from '../components/AirportCard'
 import Nav from '../components/Nav'
 import Head from '../components/Head'
-const axios = require('axios');
 import { useState, useEffect } from 'react';
+import { getAirportData } from '../services/api';
 
 
 const Home = () => {
@@ -12,10 +12,8 @@ const Home = () => {
   const [showError, setShowError] = useState(false);
   const [data, setData] = useState([]);
 
-  useEffect(getAirportData, []);
-
-  function getAirportData() {
-    axios.get('https://api.qantas.com/flight/refData/airport')
+  const init = () => {
+    getAirportData()
       .then(function (response) {
         setData(response.data);
         setLoading(false);
@@ -27,6 +25,8 @@ const Home = () => {
         setLoading(false);
       });
   }
+
+  useEffect(init, []);
 
 
   return (
