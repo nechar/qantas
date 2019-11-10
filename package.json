@@ -1,11 +1,14 @@
 {
-  "name": "Qantas",
+  "name": "qantas",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "jest",
+    "test:watch": "jest — watch",
+    "test:coverage": "jest — coverage"
   },
   "dependencies": {
     "axios": "^0.19.0",
@@ -14,5 +17,14 @@
     "react": "16.11.0",
     "react-dom": "16.11.0",
     "reactstrap": "^8.1.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-jest": "^24.9.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "jest": "^24.9.0"
   }
 }
